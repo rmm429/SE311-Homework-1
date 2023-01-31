@@ -19,7 +19,7 @@ public class Sorter {
                 String curLine = lines.get(i).getLineAsString();
                 String nextLine =  lines.get(j).getLineAsString();
 
-                if(curLine.compareTo(nextLine) > 0) {
+                if(curLine.compareToIgnoreCase(nextLine) > 0) {
                     Collections.swap(lines, i, j);
                 }
             }
