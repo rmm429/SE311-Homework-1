@@ -1,0 +1,6 @@
+# MacOS generated files
+.DS_Store
+
+# Input and output files
+SampleInputFile.txt
+SampleOutputFile.txt
