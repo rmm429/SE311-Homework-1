@@ -9,7 +9,7 @@ public class FileOutput implements Output {
 
     public void outputLines(ArrayList<KWICLine> lines) {
 
-        String outputFile = OptionReader.getString("OutputFileName");
+        String outputFile = OptionReader.getString("KWICOutputFileName");
 
         try {
 

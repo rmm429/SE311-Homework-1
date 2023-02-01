@@ -4,3 +4,6 @@
 # Input and output files
 SampleInputFile.txt
 SampleOutputFile.txt
+
+# IntelliJ output directory
+/out/

@@ -9,7 +9,7 @@ public class FileInput implements Input {
     //@Override
     public void acceptInput(LineStorage storageObj) {
 
-        String inputFile = OptionReader.getString("InputFileName");
+        String inputFile = OptionReader.getString("KWICInputFileName");
 
         try {
 

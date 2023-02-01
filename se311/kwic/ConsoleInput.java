@@ -30,6 +30,8 @@ public class ConsoleInput implements Input {
             curSentence = scanner.nextLine();
         }
 
+        scanner.close();
+
         //        Scanner scanner = new Scanner(System.in);
 //        ArrayList<String> list = new ArrayList<String>();
 //

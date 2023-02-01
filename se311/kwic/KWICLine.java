@@ -10,6 +10,8 @@ public class KWICLine {
     private ArrayList<String> wordList;
     private String originalLine;
 
+    // instead of storing each original line, point to an instance of the original KWIC line
+
     public KWICLine(String oriLine) {
 
         originalLine = oriLine;
