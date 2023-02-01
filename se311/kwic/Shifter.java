@@ -1,29 +1,32 @@
 package se311.kwic;
 
-import javax.sound.sampled.Line;
-import java.util.ArrayList;
-
 public class Shifter {
 
-    protected LineStorage stored;
+    private LineStorage stored;
 
+    /**
+     * Assign the passed Line Storage object to the local one
+     *
+     * @param	storageObj	    the Line Storage object
+     */
     public void init(LineStorage storageObj) {
         stored = storageObj;
     }
 
+    /**
+     * Circular shift each of the stored lines
+     */
     public void shiftAllLines() {
 
         int lineCount = stored.countTotalLines();
         for(int i = 0; i < lineCount; i++) {
 
-            // System.out.println(stored.getOneLine(i).getOriLine() + "\n");
-            // KWICLine curLine = new KWICLine(stored.getOneLine(i));
             KWICLine oldLine = stored.getOneLine(i).clone();
             int wordCount = oldLine.wordCount();
 
             for (int j = 1; j < wordCount; j++) {
 
-                KWICLine newLine = oldLine.clone();
+                KWICLine newLine = oldLine.clone(); // KWIC Line cloned as to not modify the original object
                 String lastWord = newLine.getWord(wordCount - 1);
                 newLine.insertWord(0, lastWord);
                 newLine.delWord(wordCount);
@@ -33,38 +36,13 @@ public class Shifter {
             }
 
         }
-
-//        for(KWICLine kwicLine:stored.getAllLines()) {
-//
-//            for(String line:kwicLine.getWordList()) {
-//                System.out.print(line + " ");
-//            }
-//            System.out.println();
-//
-//        }
-
-
-//        int origLineCount = stored.countTotalLines();
-//        for(int i = 0; i < origLineCount; i++) {
-//
-//            KWICLine curLine = stored.getOneLine(i);
-//            int wordCount = curLine.wordCount();
-//
-//            String lastWord = curLine.getWord(wordCount - 1);
-//            curLine.insertWord(0, lastWord);
-//            curLine.delWord(wordCount - 1);
-//
-//            for(String word:curLine.getWordList()) {
-//                System.out.println(word);
-//            }
-//
-//
-//        }
-
-
-
     }
 
+    /**
+     * Get the circular shifted lines
+     *
+     * @return				the circular shifted Line Storage object
+     */
     public LineStorage getShiftLines() {
         return stored;
     }

@@ -1,7 +1,6 @@
 package se311.search;
 
 import se311.kwic.KWICLine;
-
 import java.util.ArrayList;
 
 public abstract class OutputDecorator implements Output {
@@ -12,19 +11,15 @@ public abstract class OutputDecorator implements Output {
         decoratedOutput = output;
     }
 
+    /**
+     * Outputs the result of searching for lines with the provided keyword
+     * Calls the method of the instantiated Output object passed in previously
+     *
+     * @param	keyword             the user-inputted keyword
+     * @param	linesWithKeyword    all of the lines that contain the keyword
+     */
     public void outputSearchResults(String keyword, ArrayList<KWICLine> linesWithKeyword) {
         decoratedOutput.outputSearchResults(keyword, linesWithKeyword);
     }
-
-//
-//    private Output outputObj;
-//
-//    public OutputDecorator(Output output) {
-//        outputObj = output;
-//    }
-//
-//    public void outputSearchResults(String keyword, ArrayList<KWICLine> linesWithKeyword) {
-//        outputObj.outputSearchResults(keyword, linesWithKeyword);
-//    }
 
 }

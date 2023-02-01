@@ -3,6 +3,7 @@ package se311.kwic;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+// Code provided by the professor; unmodified
 public class KWICObjectLoader extends ClassLoader {
 
 	public Object loadObject(String className) {

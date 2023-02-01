@@ -2,6 +2,7 @@ package se311.kwic;
 
 import java.util.*;
 
+// Code provided by the professor; unmodified
 public class OptionReader {
 	private static HashMap<String, String> userOptions = null;
 	private static KWICObjectLoader kwicObjLoader = new KWICObjectLoader();
@@ -27,7 +28,7 @@ public class OptionReader {
 //		});
 //	}
 	
-	public static Object getObjectFromKey(String keyStr) { 
+	public static Object getObjectFromKey(String keyStr) {
 		Object kwicObj = null;
 		if (userOptions.containsKey(keyStr)) {
 			String objName;

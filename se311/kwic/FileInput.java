@@ -6,10 +6,14 @@ import java.util.Scanner;
 
 public class FileInput implements Input {
 
-    //@Override
+    /**
+     * Scan text from a file as input
+     *
+     * @param	storageObj	the object where the lines from the file will be stored
+     */
     public void acceptInput(LineStorage storageObj) {
 
-        String inputFile = OptionReader.getString("KWICInputFileName");
+        String inputFile = OptionReader.getString("KWICInputFileName"); // file name from config file
 
         try {
 

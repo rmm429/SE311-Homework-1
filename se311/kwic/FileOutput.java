@@ -7,9 +7,14 @@ import java.util.ArrayList;
 
 public class FileOutput implements Output {
 
+    /**
+     * Output all of the stored lines to a file
+     *
+     * @param	lines	    the object where the sorted lines are stored
+     */
     public void outputLines(ArrayList<KWICLine> lines) {
 
-        String outputFile = OptionReader.getString("KWICOutputFileName");
+        String outputFile = OptionReader.getString("KWICOutputFileName"); // output file name from config file
 
         try {
 
@@ -17,7 +22,7 @@ public class FileOutput implements Output {
 
             for(int i = 0; i < lines.size(); i++) {
                 fileWriter.write(lines.get(i).getLineAsString());
-                if(i != lines.size() - 1) {
+                if(i != lines.size() - 1) { // separates each line with a newline except for the last line
                     fileWriter.write("\n");
                 }
             }

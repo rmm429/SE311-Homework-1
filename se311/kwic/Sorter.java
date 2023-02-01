@@ -7,6 +7,11 @@ public class Sorter {
 
     private ArrayList<KWICLine> lines;
 
+    /**
+     * Alphabetically sort the stored lines
+     *
+     * @param	shiftedLines    the circular shifted lines
+     */
     public void sortLines(LineStorage shiftedLines) {
 
         lines = shiftedLines.getAllLines();
@@ -19,7 +24,7 @@ public class Sorter {
                 String curLine = lines.get(i).getLineAsString();
                 String nextLine =  lines.get(j).getLineAsString();
 
-                if(curLine.compareToIgnoreCase(nextLine) > 0) {
+                if(curLine.compareToIgnoreCase(nextLine) > 0) { // Uppercase and lowercase letters will be treated the same
                     Collections.swap(lines, i, j);
                 }
             }
@@ -27,6 +32,11 @@ public class Sorter {
         }
     }
 
+    /**
+     * Get the sorted lines
+     *
+     * @return				a list of the sorted KWIC Lines
+     */
     public ArrayList<KWICLine> getSortedLines() {
         return lines;
     }

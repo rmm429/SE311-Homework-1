@@ -11,6 +11,12 @@ public class KeywordSearch {
         linesWithKeyword = new ArrayList<>();
     }
 
+    /**
+     * Searches for the keyword amongst the sorted lines and returns those lines
+     *
+     * @param	keyword             the user-inputted keyword
+     * @param	sortedLines         all of the lines, sorted
+     */
     public ArrayList<KWICLine> searchForKeyword(String keyword, ArrayList<KWICLine> sortedLines) {
 
         for(KWICLine line:sortedLines) {
