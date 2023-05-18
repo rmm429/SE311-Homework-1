@@ -1,3 +1,8 @@
+This project is a Keyword-in-Context (KWIC) searcher.
+This version utilizes modules for each of the components of the KWIC sorting as well as input, search, and output.
+When the program is started, it will prompt the user to enter lines that will be KWIC-sorted and stored for use.
+Then, the user can search for a keyword that is stored within the KWIC-sorted lines repository.
+
 To run the program, run the Controller.java file in the "se311" folder.
 The main() method is included here.
 
@@ -8,8 +13,6 @@ Notes for grader:
 	The abstract decorator class and footer decorator constructors take one parameter & the header takes two.
 	The provided object loader does not give an option to accept constructors with parameters.
 	Also, because the Output Decorator is abstract, using an object loader will not allow me to access the extended methods of the header and footer.
-	I tried many methods and am quite unfamiliar with object loaders and decorators.
-	I expect this will dock my grade, but I can explain what issues I was getting if you would like for clarification.
 	I have included comments in the Controller.java file where this occurred.
 
 config.properites:
