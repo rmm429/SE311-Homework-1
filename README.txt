@@ -1,5 +1,5 @@
 This project is a Keyword-in-Context (KWIC) searcher.
-This version utilizes modules for each of the components of the KWIC sorting as well as input, search, and output.
+This version utilizes modules for each of the components of the KWIC sorting as well as for input, search, and output.
 When the program is started, it will prompt the user to enter lines that will be KWIC-sorted and stored for use.
 Then, the user can search for a keyword that is stored within the KWIC-sorted lines repository.
 
